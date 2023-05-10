@@ -4,6 +4,11 @@ on:
     branches: [main]
     paths: [hello-world-docker-action/**]
   workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy'
+        type: environment
+        required: true
 
 jobs:
   test-action:
